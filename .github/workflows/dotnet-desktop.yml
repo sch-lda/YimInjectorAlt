@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: binary
-          path: YimInjectorAlt\YimInjectorAlt\bin\x64
+          path: YimInjectorAlt\
         
