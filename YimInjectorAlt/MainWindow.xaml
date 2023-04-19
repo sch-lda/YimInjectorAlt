@@ -1,0 +1,99 @@
+﻿<ui:Window
+    x:Class="YimInjectorAlt.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tb="http://www.hardcodet.net/taskbar"
+    xmlns:ui="http://crazyzhang.cn/ui/2023/xaml"
+    x:Name="Window_Main"
+    Title="GTA5线上小助手-仅测试"
+    Width="670"
+    Height="283"
+    MinWidth="128"
+    MinHeight="72"
+    CaptionHeight="40"
+    Closing="Window_Main_Closing"
+    Loaded="Window_Main_Loaded"
+    Style="{StaticResource SystemWindowStyle}"
+    mc:Ignorable="d">
+
+    <ui:Window.TitleContent>
+        <DockPanel LastChildFill="True">
+            <StackPanel
+                VerticalAlignment="Center"
+                DockPanel.Dock="Left"
+                Orientation="Horizontal">
+                <Image
+                    Height="25"
+                    Margin="5"
+                    Source="/Assets/Favicon.ico"
+                    Style="{StaticResource ImageStyle_HighQuality}" />
+                <TextBlock
+                    Margin="0,0,5,0"
+                    VerticalAlignment="Center"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    Text="仅测试" />
+            </StackPanel>
+            <!--  ################################  -->
+            <StackPanel
+                VerticalAlignment="Center"
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <TextBlock Margin="5" Text="{Binding MainModel.AppVersion, StringFormat='v{0}', FallbackValue='1.0.0.0'}" />
+                <Border
+                    Width="2"
+                    Margin="5"
+                    Background="#808080"
+                    SnapsToDevicePixels="True" />
+                <TextBlock Margin="5" Text="{Binding MainModel.AppRunTime, FallbackValue='00:00:00'}" />
+                <TextBlock
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    IsEnabled="{Binding MainModel.IsGTA5Run}"
+                    Style="{StaticResource TextBlockStyle_IconFontGTA5IsRun}"
+                    Text="&#xe64d;" />
+            </StackPanel>
+            <!--  ################################  -->
+            <StackPanel
+                DockPanel.Dock="Left"
+                Orientation="Horizontal"
+                WindowChrome.IsHitTestVisibleInChrome="True">
+              
+                <ui:RadioButtonIcon
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="HacksView"
+                    Content="Yimmenu"
+                    Icon="&#xe691;" />
+             
+                <ui:RadioButtonIcon
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="AboutView"
+                    Content="关于"
+                    Icon="&#xe625;" />
+            </StackPanel>
+        </DockPanel>
+    </ui:Window.TitleContent>
+
+    <Grid>
+        <ContentControl x:Name="ContentControl_Main" FocusVisualStyle="{x:Null}" />
+        <!--  托盘图标  -->
+        <tb:TaskbarIcon
+            x:Name="TaskbarIcon_Main"
+            DoubleClickCommand="{Binding ShowWindowCommand}"
+            IconSource="/Assets/Favicon.ico"
+            ToolTipText="GTA5线上小助手-仅测试">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Click="TaskbarIcon_MenuItem_Click " Header="显示窗口" />
+                    <MenuItem Click="TaskbarIcon_MenuItem_Click " Header="隐藏到托盘" />
+                    <Separator />
+                    <MenuItem Click="TaskbarIcon_MenuItem_Click " Header="退出" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Grid>
+
+</ui:Window>

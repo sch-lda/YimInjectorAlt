@@ -1,0 +1,17 @@
+﻿global using System;
+global using System.IO;
+global using System.IO.Compression;
+global using System.Text;
+global using System.Xml;
+global using System.Reflection;
+global using System.Diagnostics;
+global using System.ComponentModel;
+global using System.Threading;
+global using System.Threading.Tasks;
+global using System.Windows;
+global using System.Windows.Shell;
+global using System.Windows.Controls;
+global using System.Windows.Threading;
+global using System.Windows.Navigation;
+global using System.Collections.Generic;
+global using System.Runtime.InteropServices;

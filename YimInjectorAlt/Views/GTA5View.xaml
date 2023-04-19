@@ -1,0 +1,88 @@
+﻿<UserControl
+    x:Class="YimInjectorAlt.Views.GTA5View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://crazyzhang.cn/ui/2023/xaml"
+    d:DesignHeight="720"
+    d:DesignWidth="1280"
+    Style="{StaticResource UserControlStyle_Loaded}"
+    mc:Ignorable="d">
+
+    <WrapPanel>
+        <ui:ButtonIcon
+            Title="External Menu"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="ExternalMenu"
+            Content="小助手外置菜单"
+            Icon="&#xe666;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Spawn Vehicle"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="SpawnVehicle"
+            Content="刷出线上载具"
+            Icon="&#xe629;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Custom Teleport"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="CustomTeleport"
+            Content="自定义坐标传送"
+            Icon="&#xe65d;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Custom Blip"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="CustomBlip"
+            Content="自定义Blip传送"
+            Icon="&#xe627;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Heists Edit"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="HeistsEdit"
+            Content="抢劫任务编辑器"
+            Icon="&#xe63b;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Outfits Edit"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="OutfitsEdit"
+            Content="角色服装编辑器"
+            Icon="&#xe8c7;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="STAT Auto Scripts"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="StatScripts"
+            Content="STAT自动化脚本"
+            Icon="&#xe636;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Session Chat"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="SessionChat"
+            Content="战局快捷聊天"
+            Icon="&#xe61f;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+        <ui:ButtonIcon
+            Title="Speed Meter"
+            Command="{Binding GTA5ViewClickCommand}"
+            CommandParameter="SpeedMeter"
+            Content="车速表"
+            Icon="&#xeab4;"
+            Style="{StaticResource ButtonStyle_FuncModule}" />
+
+    </WrapPanel>
+
+</UserControl>

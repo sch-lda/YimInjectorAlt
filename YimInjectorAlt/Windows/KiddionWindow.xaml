@@ -1,0 +1,94 @@
+﻿<ui:Window
+    x:Class="YimInjectorAlt.Windows.KiddionWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://crazyzhang.cn/ui/2023/xaml"
+    x:Name="Window_Kiddion"
+    Title="GTA5线上小助手-仅测试 - Kiddion脚本管理"
+    Width="600"
+    Height="350"
+    Closing="Window_Kiddion_Closing"
+    Loaded="Window_Kiddion_Loaded"
+    ResizeMode="NoResize"
+    Style="{StaticResource SystemWindowStyle}"
+    WindowStartupLocation="CenterOwner"
+    mc:Ignorable="d">
+
+    <ui:Window.TitleContent>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+            <Image
+                Height="20"
+                Margin="5"
+                Source="/Assets/Favicon.ico"
+                Style="{StaticResource ImageStyle_HighQuality}" />
+            <TextBlock
+                VerticalAlignment="Center"
+                FontSize="14"
+                FontWeight="Bold"
+                Text="{Binding ElementName=Window_Kiddion, Path=Title}" />
+        </StackPanel>
+    </ui:Window.TitleContent>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!--  ///////////////////////  -->
+        <DockPanel Margin="5,5,5,0">
+            <StackPanel
+                Margin="5,0,5,0"
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <Button
+                    Background="#E6B428"
+                    Command="{Binding LuaScriptClickCommand}"
+                    CommandParameter="LuaScriptDir"
+                    Content="打开脚本目录" />
+                <Button
+                    Background="#EA4335"
+                    Command="{Binding LuaScriptClickCommand}"
+                    CommandParameter="ClearScriptDir"
+                    Content="清空脚本目录" />
+            </StackPanel>
+            <TextBlock
+                Margin="5,0,5,0"
+                VerticalAlignment="Center"
+                FontSize="20"
+                FontWeight="Bold"
+                Text="注意备份和更新Lua脚本" />
+        </DockPanel>
+        <!--  ///////////////////////  -->
+        <WrapPanel Grid.Row="1" Margin="5">
+            <Button
+                Background="#4285F4"
+                Command="{Binding LuaScriptClickCommand}"
+                CommandParameter="AliceLua"
+                Content="Alice Lua脚本" />
+            <Button
+                Background="#4285F4"
+                Command="{Binding LuaScriptClickCommand}"
+                CommandParameter="IdealLua"
+                Content="Ideal Lua脚本" />
+        </WrapPanel>
+        <!--  ///////////////////////  -->
+        <StackPanel Grid.Row="2" Margin="5">
+            <TextBlock
+                Margin="5,0,5,5"
+                Style="{StaticResource TextBlockStyle_Hint}"
+                Text="提示：以上脚本为小助手收集的Kiddion Lua脚本，每次小助手更新，脚本也会更新到最新版本" />
+            <TextBlock
+                Margin="5,0,5,5"
+                Style="{StaticResource TextBlockStyle_Hint}"
+                Text="提示：玩家如果要更新脚本，需要将旧脚本手动删除，然后点击上述对应按钮释放最新版本脚本（小助手不会主动更新用户脚本，需要玩家手动替换）" />
+            <TextBlock
+                Margin="5,0,5,5"
+                Style="{StaticResource TextBlockStyle_Hint}"
+                Text="提示：如果你有重要脚本，注意做好备份，避免误删导致脚本丢失，具体可以打开脚本目录查看Lua文件" />
+        </StackPanel>
+    </Grid>
+
+</ui:Window>

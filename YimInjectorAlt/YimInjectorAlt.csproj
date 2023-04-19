@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>disable</Nullable>
+		<UseWPF>true</UseWPF>
+		<Platforms>x64</Platforms>
+		<StartupObject>YimInjectorAlt.App</StartupObject>
+		<ApplicationIcon>Assets\Favicon.ico</ApplicationIcon>
+		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<ItemGroup>
+
+		<PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Assets\Favicon.ico" />
+		<Resource Include="Assets\Hacks\YimMenu.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\GTA5Core\GTA5Core.csproj" />
+		<ProjectReference Include="..\GTA5Inject\GTA5Inject.csproj" />
+		<ProjectReference Include="..\GTA5Menu\GTA5Menu.csproj" />
+		<ProjectReference Include="..\GTA5Shared\GTA5Shared.csproj" />
+		<ProjectReference Include="..\MetroSkin\MetroSkin.csproj" />
+	</ItemGroup>
+
+</Project>

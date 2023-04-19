@@ -1,0 +1,65 @@
+﻿<ui:Window
+    x:Class="YimInjectorAlt.Windows.Kiddion2Window"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://crazyzhang.cn/ui/2023/xaml"
+    x:Name="Window_Kiddion2"
+    Title="GTA5线上小助手-仅测试 - Kiddion汉化修正工具"
+    Width="600"
+    Height="700"
+    Closing="Window_Kiddion2_Closing"
+    Loaded="Window_Kiddion2_Loaded"
+    ResizeMode="CanMinimize"
+    Style="{StaticResource SystemWindowStyle}"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+
+    <ui:Window.TitleContent>
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+            <Image
+                Height="20"
+                Margin="5"
+                Source="/Assets/Favicon.ico"
+                Style="{StaticResource ImageStyle_HighQuality}" />
+            <TextBlock
+                VerticalAlignment="Center"
+                FontSize="14"
+                FontWeight="Bold"
+                Text="{Binding ElementName=Window_Kiddion2, Path=Title}" />
+        </StackPanel>
+    </ui:Window.TitleContent>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--  ///////////////////////  -->
+        <StackPanel
+            Margin="5,5,5,0"
+            DockPanel.Dock="Right"
+            Orientation="Horizontal">
+            <Button Command="{Binding GetKiddionUICommand}" Content="获取Kiddion文本" />
+            <Button Command="{Binding BatchTranslationCommand}" Content="批量机器翻译" />
+            <TextBlock Margin="5" VerticalAlignment="Center">
+                <Hyperlink NavigateUri="https://github.com/CrazyZhang666/YimInjectorAlt/discussions/new?category=general" RequestNavigate="Hyperlink_RequestNavigate">
+                    汉化请反馈到GitHub
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+        <!--  ///////////////////////  -->
+        <TextBox
+            x:Name="TextBox_UIText"
+            Grid.Row="1"
+            Margin="5"
+            VerticalAlignment="Stretch"
+            VerticalContentAlignment="Top"
+            FontFamily="Consolas"
+            FontSize="16"
+            HorizontalScrollBarVisibility="Auto"
+            VerticalScrollBarVisibility="Auto" />
+    </Grid>
+
+</ui:Window>
