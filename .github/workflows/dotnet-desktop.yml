@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: binary
-          path: YimInjectorAlt\
+          path: YimInjectorAlt\bin\x64\Release\net6.0-windows\
         
