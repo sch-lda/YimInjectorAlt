@@ -114,19 +114,19 @@ public partial class MainWindow
         IsAppRunning = false;
 
         WindowClosingEvent();
-        LoggerHelper.Info("调用主窗口关闭事件成功");
+        // LoggerHelper.Info("调用主窗口关闭事件成功");
 
         GTA5View.ActionCloseAllGTA5Window();
-        LoggerHelper.Info("关闭小助手功能窗口成功");
+        // LoggerHelper.Info("关闭小助手功能窗口成功");
 
         ProcessHelper.CloseThirdProcess();
-        LoggerHelper.Info("关闭第三方进程成功");
+        // LoggerHelper.Info("关闭第三方进程成功");
 
         TaskbarIcon_Main?.Dispose();
-        LoggerHelper.Info("清理托盘图标成功");
+        // LoggerHelper.Info("清理托盘图标成功");
 
         Application.Current.Shutdown();
-        LoggerHelper.Info("主程序关闭\n\n");
+        // LoggerHelper.Info("主程序关闭\n\n");
     }
 
     ///////////////////////////////////////////////////////////////
@@ -218,7 +218,7 @@ public partial class MainWindow
     {
         try
         {
-            LoggerHelper.Info("正在检测版本更新...");
+            // LoggerHelper.Info("正在检测版本更新...");
             this.Dispatcher.Invoke(() =>
             {
                 NotifierHelper.Show(NotifierType.Notification, "正在检测版本更新...");
@@ -250,7 +250,7 @@ public partial class MainWindow
                 }
                 else
                 {
-                    LoggerHelper.Info($"当前已是最新版本 {CoreUtil.ServerVersion}");
+                    // LoggerHelper.Info($"当前已是最新版本 {CoreUtil.ServerVersion}");
                     this.Dispatcher.Invoke(() =>
                     {
                         NotifierHelper.Show(NotifierType.Notification, $"当前已是最新版本 {CoreUtil.ServerVersion}");
@@ -259,7 +259,7 @@ public partial class MainWindow
             }
             else
             {
-                LoggerHelper.Error("网络异常");
+                // LoggerHelper.Error("网络异常");
                 this.Dispatcher.Invoke(() =>
                 {
                     NotifierHelper.Show(NotifierType.Error, "网络异常，这并不影响小助手程序使用");
@@ -268,7 +268,7 @@ public partial class MainWindow
         }
         catch (Exception ex)
         {
-            LoggerHelper.Error($"初始化错误", ex);
+            // LoggerHelper.Error($"初始化错误", ex);
             this.Dispatcher.Invoke(() =>
             {
                 NotifierHelper.Show(NotifierType.Error, $"初始化错误\n{ex.Message}");

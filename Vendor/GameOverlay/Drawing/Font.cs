@@ -1,6 +1,6 @@
 ﻿using System;
 
-using SharpDX.DirectWrite;
+// using SharpDX.DirectWrite;
 
 using FontFactory = SharpDX.DirectWrite.Factory;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 
-using SharpDX.Direct2D1;
-using SharpDX.Mathematics.Interop;
+// using SharpDX.Direct2D1;
+// using SharpDX.Mathematics.Interop;
 
 namespace GameOverlay.Drawing;
 

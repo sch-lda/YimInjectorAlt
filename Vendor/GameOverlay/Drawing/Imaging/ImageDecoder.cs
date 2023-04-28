@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using SharpDX.Direct2D1;
-using SharpDX.WIC;
+// using SharpDX.Direct2D1;
+// using SharpDX.WIC;
 
 using Bitmap = SharpDX.Direct2D1.Bitmap;
 using PixelFormat = SharpDX.WIC.PixelFormat;

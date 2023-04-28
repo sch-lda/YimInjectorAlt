@@ -36,12 +36,8 @@ public static class FileHelper
     public static string Dir_Cache { get; private set; }
     public static string Dir_Config { get; private set; }
     public static string Dir_Inject { get; private set; }
-    public static string Dir_Log { get; private set; }
 
     public static string Dir_Kiddion_Scripts { get; private set; }
-
-    public static string Dir_Log_Crash { get; private set; }
-    public static string Dir_Log_NLog { get; private set; }
 
     public static string File_Kiddion_Kiddion { get; private set; }
     public static string File_Kiddion_KiddionChs { get; private set; }
@@ -79,12 +75,10 @@ public static class FileHelper
         Dir_Cache = Path.Combine(Dir_Default, "Cache");
         Dir_Config = Path.Combine(Dir_Default, "Config");
         Dir_Inject = Path.Combine(Dir_Default, "Inject");
-        Dir_Log = Path.Combine(Dir_Default, "Log");
+
 
         Dir_Kiddion_Scripts = Path.Combine(Dir_Kiddion, "scripts");
 
-        Dir_Log_Crash = Path.Combine(Dir_Log, "Crash");
-        Dir_Log_NLog = Path.Combine(Dir_Log, "NLog");
 
         File_Kiddion_Kiddion = Path.Combine(Dir_Kiddion, "Kiddion.exe");
         File_Kiddion_KiddionChs = Path.Combine(Dir_Kiddion, "KiddionChs.dll");
@@ -108,17 +102,6 @@ public static class FileHelper
         Dir_BigBaseV2 = Path.Combine(Dir_AppData, "BigBaseV2");
     }
 
-    /// <summary>
-    /// 保存崩溃日志
-    /// </summary>
-    /// <param name="log">日志内容</param>
-    public static void SaveCrashLog(string log)
-    {
-        var path = Dir_Log_Crash;
-        Directory.CreateDirectory(path);
-        path += $@"\#Crash#{DateTime.Now:yyyyMMdd_HH-mm-ss_ffff}.log";
-        File.WriteAllText(path, log);
-    }
 
     /// <summary>
     /// 从资源文件中抽取资源文件

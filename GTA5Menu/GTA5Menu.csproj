@@ -17,7 +17,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-
+	  <Folder Include="ESP\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -25,7 +25,6 @@
 		<ProjectReference Include="..\GTA5HotKey\GTA5HotKey.csproj" />
 		<ProjectReference Include="..\GTA5Shared\GTA5Shared.csproj" />
 		<ProjectReference Include="..\MetroSkin\MetroSkin.csproj" />
-		<ProjectReference Include="..\Vendor\GameOverlay\GameOverlay.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

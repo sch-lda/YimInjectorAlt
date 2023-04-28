@@ -1,9 +1,9 @@
 ﻿using System;
 
-using SharpDX.Direct2D1;
-using SharpDX.Mathematics.Interop;
+// using SharpDX.Direct2D1;
+// using SharpDX.Mathematics.Interop;
 
-using SharpDXGradientBrush = SharpDX.Direct2D1.LinearGradientBrush;
+// using SharpDXGradientBrush = SharpDX.Direct2D1.LinearGradientBrush;
 
 namespace GameOverlay.Drawing;
 

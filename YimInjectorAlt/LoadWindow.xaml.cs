@@ -35,9 +35,9 @@ public partial class LoadWindow
 
                 LoadModel.LoadState = "正在初始化工具...";
 
-                LoggerHelper.Info("开始初始化程序...");
-                LoggerHelper.Info($"当前程序版本号 {CoreUtil.ClientVersion}");
-                LoggerHelper.Info($"当前程序最后编译时间 {CoreUtil.BuildDate}");
+                // LoggerHelper.Info("开始初始化程序...");
+                // LoggerHelper.Info($"当前程序版本号 {CoreUtil.ClientVersion}");
+                // LoggerHelper.Info($"当前程序最后编译时间 {CoreUtil.BuildDate}");
 
                 // 客户端程序版本号
                 LoadModel.VersionInfo = CoreUtil.ClientVersion;
@@ -47,7 +47,7 @@ public partial class LoadWindow
                 /////////////////////////////////////////////////////////////////////
 
                 LoadModel.LoadState = "正在初始化配置文件...";
-                LoggerHelper.Info("正在初始化配置文件...");
+                // LoggerHelper.Info("正在初始化配置文件...");
 
                 // 创建指定文件夹，用于释放必要文件和更新软件（如果已存在则不会创建）
                 Directory.CreateDirectory(FileHelper.Dir_Cache);
@@ -55,7 +55,7 @@ public partial class LoadWindow
                 Directory.CreateDirectory(FileHelper.Dir_Kiddion);
                 Directory.CreateDirectory(FileHelper.Dir_Kiddion_Scripts);
                 Directory.CreateDirectory(FileHelper.Dir_Inject);
-                Directory.CreateDirectory(FileHelper.Dir_Log);
+
 
                 // 清空缓存文件夹
                 FileHelper.ClearDirectory(FileHelper.Dir_Cache);
@@ -72,7 +72,7 @@ public partial class LoadWindow
                         FileHelper.ExtractResFile(FileHelper.Res_Inject_YimMenu, FileHelper.File_Inject_YimMenu);
                     else
                     {
-                        LoggerHelper.Error("Yimmenu未准备就绪");
+                        // LoggerHelper.Error("Yimmenu未准备就绪");
                         this.Dispatcher.Invoke(() =>
                         {
                             NotifierHelper.Show(NotifierType.Error, "请卸载注入yimmenu或退出游戏，然后重启此程序直至不出现错误信息");
@@ -99,7 +99,7 @@ public partial class LoadWindow
             catch (Exception ex)
             {
                 LoadModel.LoadState = $"初始化错误，发生了未知异常！\n{ex.Message}";
-                LoggerHelper.Error("初始化错误，发生了未知异常", ex);
+                // LoggerHelper.Error("初始化错误，发生了未知异常", ex);
 
                 this.Dispatcher.Invoke(() =>
                 {

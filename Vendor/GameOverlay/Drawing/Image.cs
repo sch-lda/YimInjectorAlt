@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 
-using SharpDX.WIC;
-using SharpDX.Direct2D1;
+// using SharpDX.WIC;
+// using SharpDX.Direct2D1;
 
 using GameOverlay.Drawing.Imaging;
 

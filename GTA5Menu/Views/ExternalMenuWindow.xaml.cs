@@ -29,7 +29,6 @@ public partial class ExternalMenuWindow
     private readonly DriverButlerView DriverButlerView = new();
     private readonly BlipTeleportView BlipTeleportView = new();
     private readonly JobHelperView JobHelperView = new();
-    private readonly ExternalOverlayView ExternalOverlayView = new();
     private readonly PlayerListView PlayerListView = new();
 
     private readonly ReadMeView ReadMeView = new();
@@ -129,7 +128,6 @@ public partial class ExternalMenuWindow
         NavMenus.Add(new NavMenu() { Icon = "\xe610", Title = "Blip传送", ViewName = "BlipTeleportView" });
         NavMenus.Add(new NavMenu() { Icon = "\xe610", Title = "随身技工", ViewName = "DriverButlerView" });
         NavMenus.Add(new NavMenu() { Icon = "\xe610", Title = "任务帮手", ViewName = "JobHelperView" });
-        NavMenus.Add(new NavMenu() { Icon = "\xe610", Title = "外部ESP", ViewName = "ExternalOverlayView" });
         NavMenus.Add(new NavMenu() { Icon = "\xe610", Title = "玩家列表", ViewName = "PlayerListView" });
 
         NavMenus.Add(new NavMenu() { Icon = "\xe610", Title = "README", ViewName = "ReadMeView" });
@@ -173,9 +171,6 @@ public partial class ExternalMenuWindow
                 break;
             case "JobHelperView":
                 ContentControl_Main.Content = JobHelperView;
-                break;
-            case "ExternalOverlayView":
-                ContentControl_Main.Content = ExternalOverlayView;
                 break;
             case "PlayerListView":
                 ContentControl_Main.Content = PlayerListView;

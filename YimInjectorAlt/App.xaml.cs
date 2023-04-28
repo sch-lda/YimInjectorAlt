@@ -60,8 +60,7 @@ namespace YimInjectorAlt
         /// <param name="e"></param>
         private void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
-            var msg = GetExceptionInfo(e.Exception, e.ToString());
-            FileHelper.SaveCrashLog(msg);
+        
         }
 
         /// <summary>
@@ -71,8 +70,7 @@ namespace YimInjectorAlt
         /// <param name="e"></param>
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            var msg = GetExceptionInfo(e.ExceptionObject as Exception, e.ToString());
-            FileHelper.SaveCrashLog(msg);
+
         }
 
         /// <summary>
@@ -82,8 +80,7 @@ namespace YimInjectorAlt
         /// <param name="e"></param>
         private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
         {
-            var msg = GetExceptionInfo(e.Exception, e.ToString());
-            FileHelper.SaveCrashLog(msg);
+
         }
 
         /// <summary>
