@@ -80,7 +80,7 @@ public partial class Kiddion2Window
     [RelayCommand]
     private async Task GetKiddionUI()
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (!ProcessHelper.IsAppRun("Kiddion"))
         {
@@ -102,7 +102,7 @@ public partial class Kiddion2Window
     [RelayCommand]
     private async Task BatchTranslation()
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (!ProcessHelper.IsAppRun("Kiddion"))
         {

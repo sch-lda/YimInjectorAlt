@@ -32,7 +32,7 @@ public partial class ToolsView : UserControl
     [RelayCommand]
     private void ToolsButtonClick(string name)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         switch (name)
         {

@@ -115,7 +115,7 @@ public partial class SpawnVehicleView : UserControl
 
     private async void Button_SpawnOnlineVehicleA_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_VehicleInfo.SelectedItem is ModelInfo info)
         {
@@ -125,7 +125,7 @@ public partial class SpawnVehicleView : UserControl
 
     private async void Button_SpawnOnlineVehicleB_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_VehicleInfo.SelectedItem is ModelInfo info)
         {

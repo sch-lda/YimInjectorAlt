@@ -94,7 +94,7 @@ public partial class MyBlipView : UserControl
 
     private void MenuItem_TeleportToBlips_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_BlipModels.SelectedItem is BlipInfo2 info)
         {
@@ -108,7 +108,7 @@ public partial class MyBlipView : UserControl
 
     private void MenuItem_DeleteMyFavorite_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_BlipModels.SelectedItem is BlipInfo2 info)
         {

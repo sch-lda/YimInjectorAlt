@@ -44,7 +44,7 @@ public partial class GTA5View : UserControl
     [RelayCommand]
     private void GTA5ViewClick(string modelName)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ProcessHelper.IsGTA5Run())
         {

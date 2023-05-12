@@ -34,7 +34,7 @@ public partial class KiddionWindow
     {
         try
         {
-            AudioHelper.PlayClickSound();
+           //
 
             switch (Name)
             {

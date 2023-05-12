@@ -27,7 +27,7 @@ public partial class DriverButlerView : UserControl
 
     private async void Button_RefushPersonalVehicleList_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         _perVehInfos.Clear();
         PerVehInfos.Clear();
@@ -67,7 +67,7 @@ public partial class DriverButlerView : UserControl
 
     private void Button_SpawnPersonalVehicle_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_PersonalVehicle.SelectedItem is PerVehInfo info)
             Vehicle.RequestPersonalVehicle(info.Id);
@@ -75,7 +75,7 @@ public partial class DriverButlerView : UserControl
 
     private void Button_GetInOnlinePV_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         Online.GetInOnlinePV();
     }

@@ -32,7 +32,6 @@
 
 	<ItemGroup>
 		<Resource Include="Assets\Favicon.ico" />
-		<Resource Include="Assets\Hacks\YimMenu.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -41,6 +40,10 @@
 		<ProjectReference Include="..\GTA5Menu\GTA5Menu.csproj" />
 		<ProjectReference Include="..\GTA5Shared\GTA5Shared.csproj" />
 		<ProjectReference Include="..\MetroSkin\MetroSkin.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Assets\Hacks\" />
 	</ItemGroup>
 
 </Project>

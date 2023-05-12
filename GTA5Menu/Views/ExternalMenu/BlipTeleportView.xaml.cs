@@ -50,7 +50,7 @@ public partial class BlipTeleportView : UserControl
 
     private void Button_BlipTeleport_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_BlipModels.SelectedItem is BlipInfo2 info)
         {

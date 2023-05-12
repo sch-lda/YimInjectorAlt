@@ -63,7 +63,7 @@ public partial class FindVehicleView : UserControl
 
     private async void MenuItem_SpawnVehicleA_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_VehicleInfo.SelectedItem is ModelInfo info)
         {
@@ -77,7 +77,7 @@ public partial class FindVehicleView : UserControl
 
     private async void MenuItem_SpawnVehicleB_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_VehicleInfo.SelectedItem is ModelInfo info)
         {
@@ -91,7 +91,7 @@ public partial class FindVehicleView : UserControl
 
     private void MenuItem_AddMyFavorite_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_VehicleInfo.SelectedItem is ModelInfo info)
         {

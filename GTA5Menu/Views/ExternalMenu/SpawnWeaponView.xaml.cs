@@ -77,7 +77,7 @@ public partial class SpawnWeaponView : UserControl
 
     private async void Button_SpawnWeapon_Click(object sender, RoutedEventArgs e)
     {
-        AudioHelper.PlayClickSound();
+       //
 
         if (ListBox_WeaponInfo.SelectedItem is ModelInfo info)
         {
